@@ -28,11 +28,11 @@ Ressalto que ainda deve instalar o pluguin **vagrant-vbguest**   pra isso basta 
 
 
 
-## Pasta Sincronizada
+## Pasta Sincronizada.
 
 O  As maquinas virtuais sincroniza a pasta /home/felipe/web da maquina local com o diretorio /var/www/html da maquina hospedeira, basta alterar conforme seu gosto, a linha nº 6 do respectivo vagrant file. 
 
-## Maria DB 
+## Maria DB.
 
 Se encontra apenas instalado, basta realizar a configuração inicial com o comando **mysql_secure_installation**, e configurar ao seu gosto. 
 
@@ -42,11 +42,11 @@ As portas SSH, HTTP e Mysql já estão devidamente configuradas, apenas a porta 
 
 Se acessar na maquina local o apache pelo brownser digitando 127.0.0.1:8080 e ainda obter as informações do php pelo 127.0.0.1:8080/php/info.php
 
-## Future Features 
+## Future Features.
 
 Vou adicionado os serviores que uso para trabalhar Com desenvolvimento, seja PHP, Java, apache, nginx Toncat, etc, embreve com o Centos8.
 
-## Utilizando 
+## Utilizando.
 
 Tudo lido e revisado, só colocar a mao na massa basta navegar pelo terminal e usar os seguintes comandos
 Vagrant up (vai iniciar a maquina virtual)
