@@ -24,7 +24,7 @@ Ressalto que ainda deve instalar o pluguin **vagrant-vbguest**   pra isso basta 
 | Pasta    | Sistema Operecional|Configuraçoes do servidor |
 | -------------|------- |:-------------:|
 | server_apache_mariadb_php7.4| Ubuntu Server 20.04 Lts |Apache + MariaDb + Php7.4     |
-| server_apache_mariadb_php7.4 | Ubuntu Server 20.04 Lts   | Apache + MariaDb + Php7.4
+| server_apache_mariadb_php 8.0 | Ubuntu Server 20.04 Lts   | Apache + MariaDb + Php7.4
 
 
 
