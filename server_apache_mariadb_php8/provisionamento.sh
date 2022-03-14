@@ -1,28 +1,32 @@
 #!/bin/bash 
 #atualiza os pacotes 
-yum -y update 
+apt update -y
+apt upgrade -y
 
-# instala o servidor de banco de dados 
-wget https://repo.mysql.com//mysql80-community-release-el7-5.noarch.rpm
-rpm -Uvh mysql80-community-release-el7-5.noarch  
+# instala o apache
+apt install -y apache2 apache2-utils
 
-# instala o apache 
-yum install httpd
+# instala o banco
+apt install -y mariadb-server mariadb-client
 
 # instala o PHP 
-yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-yum -y install yum-utils
-yum-config-manager --disable 'remi-php*'
-yum-config-manager --enable remi-php80
-yum -y install php php-{cli,fpm,mysqlnd,zip,devel,gd,mbstring,curl,xml,pear,bcmath,json}
-
-
-# habilita iniciar serviço 
-
-systemctl start httpd
-systemctl start mysqld
+apt install -y software-properties-common
+add-apt-repository ppa:ondrej/php
+apt update
+apt install -y php8.0 libapache2-mod-php8.0
+systemctl restart apache2
+apt update -y
+apt install -y php8.0-fpm libapache2-mod-fcgid
+a2enmod proxy_fcgi setenvif
+a2enconf php8.0-fpm
+systemctl restart apache2
 
 # Habilitar o Start Automatico
-systemctl enable mysqld
-systemctl enable httpd
+systemctl enable mariadb
+systemctl enable apache2
+
+#teste do php 
+cd /var/www/html
+mkdir php
+cd php
+echo "<?php phpinfo(); ?>" > info.php
