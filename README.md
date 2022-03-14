@@ -30,7 +30,7 @@ Ressalto que ainda deve instalar o pluguin **vagrant-vbguest**   pra isso basta 
 
 ## Pasta Sincronizada.
 
-O  As maquinas virtuais sincroniza a pasta /home/felipe/web da maquina local com o diretorio /var/www/html da maquina hospedeira, basta alterar conforme seu gosto, a linha nº 6 do respectivo vagrant file. 
+O  As maquinas virtuais sincroniza a past www dentro da pasta do servidor com o diretorio /var/www/html da maquina hospedeira, basta alterar conforme seu gosto, a linha nº 6 do respectivo vagrant file, logo deve se criar essa pasta para evitar erros. 
 
 ## Maria DB.
 
