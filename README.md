@@ -35,12 +35,17 @@ O  As maquinas virtuais sincroniza a past www dentro da pasta do servidor com o 
 ## Maria DB.
 
 Se encontra apenas instalado, basta realizar a configuração inicial com o comando **mysql_secure_installation**, e configurar os acessos e depois 
+
 GRANT ALL PRIVILEGES ON *.* TO 'meu_usuario'@'%' IDENTIFIED BY 'minha_senha_entre_aspas_simples';
 
 FLUSH PRIVILEGES;
 
 //Para listar todas as linhas de privilégios use o comando:
+
 SHOW GRANTS for meu_usuario;
+
+para acesso remoto comente  em /etc/mysql/mariadb.conf.d/50-server.cnf
+#bind-address =127.0.0.1 
 
 QUIT
 
